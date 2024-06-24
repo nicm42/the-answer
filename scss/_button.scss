@@ -1,0 +1,19 @@
+@use 'variables';
+
+button {
+  background-color: variables.$primary;
+  color: variables.$text;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 250ms ease-out;
+  margin-bottom: 2rem;
+  border-radius: 0.25em;
+  font-size: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: variables.$secondary;
+  }
+}
