@@ -11,6 +11,9 @@ const showTheAnswerButton = document.querySelector('.show-the-answer');
 const showEarthButton = document.querySelector('.show-earth');
 const showTheQuestionButton = document.querySelector('.show-the-question');
 
+const earthImage = document.querySelector('.earth-img');
+const explosionImage = document.querySelector('.explosion-img');
+
 showTheAnswerButton.addEventListener('click', () => {
   introSection.classList.remove('show');
   theAnswerSection.classList.add('show');
@@ -19,6 +22,12 @@ showTheAnswerButton.addEventListener('click', () => {
 showEarthButton.addEventListener('click', () => {
   theAnswerSection.classList.remove('show');
   earthSection.classList.add('show');
+
+  // After the Earth is visible, show the explosion
+  setTimeout(() => {
+    earthImage.classList.remove('show');
+    explosionImage.classList.add('show');
+  }, 1000);
 
   // After the Earth has exploded, show the next section
   setTimeout(() => {

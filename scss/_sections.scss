@@ -1,17 +1,10 @@
+@use 'mixins';
+
 body {
   position: relative;
 }
 
 section {
+  @include mixins.hide-show;
   position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 500ms ease-out,
-    visibility 500ms ease-out;
-
-  &.show {
-    opacity: 1;
-    visibility: visible;
-  }
 }

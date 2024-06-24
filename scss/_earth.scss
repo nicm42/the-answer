@@ -1,0 +1,13 @@
+@use 'mixins';
+
+.earth-container {
+  display: grid;
+  place-items: center;
+}
+
+.earth-img,
+.explosion-img {
+  @include mixins.hide-show;
+  grid-column: 1;
+  grid-row: 1;
+}
