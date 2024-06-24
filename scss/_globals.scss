@@ -1,5 +1,6 @@
 @use 'variables';
 
+// https://webaim.org/techniques/css/invisiblecontent/
 .sr-only {
   position: absolute;
   left: -10000px;
@@ -66,9 +67,12 @@ p {
   color: variables.$text;
   line-height: 1.5;
   margin-bottom: 1em;
+  margin-top: 0;
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
+  margin-bottom: 1rem;
 }

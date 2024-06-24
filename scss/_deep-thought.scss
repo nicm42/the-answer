@@ -1,4 +1,7 @@
 .deep-thought {
+  display: inline-block;
+  position: relative;
+
   // https://css-generators.com/tooltip-speech-bubble/
   .speech-bubble {
     --angle: 90deg;
@@ -34,7 +37,8 @@
       max(0%, 100% - var(--position) - var(--height) * tan(var(--angle) / 2)) 0
       max(0%, var(--position) - var(--height) * tan(var(--angle) / 2)) / 0 0
       var(--height) 0;
-    position: relative;
+    position: absolute;
+    right: 0;
 
     &::before {
       content: '';
