@@ -15,28 +15,38 @@ const earthImage = document.querySelector('.earth-img');
 const explosionImage = document.querySelector('.explosion-img');
 
 showTheAnswerButton.addEventListener('click', () => {
+  introSection.setAttribute('hidden', 'true');
   introSection.classList.remove('show');
+  theAnswerSection.removeAttribute('hidden');
   theAnswerSection.classList.add('show');
 });
 
 showEarthButton.addEventListener('click', () => {
+  theAnswerSection.setAttribute('hidden', 'true');
   theAnswerSection.classList.remove('show');
+  earthSection.removeAttribute('hidden');
   earthSection.classList.add('show');
 
   // After the Earth is visible, show the explosion
   setTimeout(() => {
+    earthImage.setAttribute('hidden', 'true');
     earthImage.classList.remove('show');
+    explosionImage.removeAttribute('hidden');
     explosionImage.classList.add('show');
   }, 1000);
 
   // After the Earth has exploded, show the next section
   setTimeout(() => {
+    earthSection.setAttribute('hidden', 'true');
     earthSection.classList.remove('show');
+    earthExplodedSection.removeAttribute('hidden');
     earthExplodedSection.classList.add('show');
   }, 2000);
 });
 
 showTheQuestionButton.addEventListener('click', () => {
+  earthExplodedSection.setAttribute('hidden', 'true');
   earthExplodedSection.classList.remove('show');
+  theQuestionSection.removeAttribute('hidden');
   theQuestionSection.classList.add('show');
 });
