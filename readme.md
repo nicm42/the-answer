@@ -26,7 +26,7 @@ I wanted to do something where everything on the page changes when you click a b
 
 ## Setup
 
-To view this project visit the demo TBC or download the files, open a terminal in that folder and install locally using npm:
+To view this project visit the [demo](https://the-answer.pages.dev/) or download the files, open a terminal in that folder and install locally using npm:
 
 ```
 npm install
