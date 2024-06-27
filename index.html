@@ -23,12 +23,14 @@
     </section>
     <section class="the-answer" hidden>
       <div class="deep-thought">
-        <div class="speech-bubble">42</div>
+        <p class="sr-only">Deep Thought says 42</p>
+        <div class="speech-bubble" aria-hidden="true">42</div>
         <img
           src="/assets/deep-thought.jpg"
           alt="Deep Thought"
           width="468"
           height="286"
+          aria-hidden="true"
         />
       </div>
       <p>
@@ -38,24 +40,30 @@
       <button class="show-earth">Tell me the question</button>
     </section>
     <section class="earth" hidden>
-      <div class="earth-container">
-        <img
-          class="earth-img show"
-          src="/assets/earth.png"
-          alt="Earth"
-          width="692"
-          height="692"
-        />
-        <img
-          class="explosion-img"
-          src="/assets/explosion.png"
-          alt="Explosion"
-          width="692"
-          height="519"
-        />
+      <div class="earth-container" aria-live="polite">
+        <div class="earth-img show">
+          <p class="sr-only">Here's the Earth</p>
+          <img
+            src="/assets/earth.png"
+            alt="Earth"
+            width="692"
+            height="692"
+            aria-hidden="true"
+          />
+        </div>
+        <div class="explosion-img">
+          <p class="sr-only">Oh no! The Earth has exploded</p>
+          <img
+            src="/assets/explosion.png"
+            alt="Explosion"
+            width="692"
+            height="519"
+            aria-hidden="true"
+          />
+        </div>
       </div>
     </section>
-    <section class="earth-exploded" hidden>
+    <section class="earth-exploded" hidden tabindex="0">
       <p>
         Oh dear. The computer Deep Thought created to work out the question has
         been mistaken for an ordinary planet and destroyed to make way for an

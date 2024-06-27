@@ -19,6 +19,7 @@ showTheAnswerButton.addEventListener('click', () => {
   introSection.classList.remove('show');
   theAnswerSection.removeAttribute('hidden');
   theAnswerSection.classList.add('show');
+  theAnswerSection.focus();
 });
 
 showEarthButton.addEventListener('click', () => {
@@ -26,6 +27,7 @@ showEarthButton.addEventListener('click', () => {
   theAnswerSection.classList.remove('show');
   earthSection.removeAttribute('hidden');
   earthSection.classList.add('show');
+  earthSection.focus();
 
   // After the Earth is visible, show the explosion
   setTimeout(() => {
@@ -33,15 +35,17 @@ showEarthButton.addEventListener('click', () => {
     earthImage.classList.remove('show');
     explosionImage.removeAttribute('hidden');
     explosionImage.classList.add('show');
-  }, 1000);
+    explosionImage.focus();
 
-  // After the Earth has exploded, show the next section
-  setTimeout(() => {
-    earthSection.setAttribute('hidden', 'true');
-    earthSection.classList.remove('show');
-    earthExplodedSection.removeAttribute('hidden');
-    earthExplodedSection.classList.add('show');
-  }, 2000);
+    // After the Earth has exploded, show the next section
+    setTimeout(() => {
+      earthSection.setAttribute('hidden', 'true');
+      earthSection.classList.remove('show');
+      earthExplodedSection.removeAttribute('hidden');
+      earthExplodedSection.classList.add('show');
+      earthExplodedSection.focus();
+    }, 1500);
+  }, 1500);
 });
 
 showTheQuestionButton.addEventListener('click', () => {
@@ -49,4 +53,5 @@ showTheQuestionButton.addEventListener('click', () => {
   earthExplodedSection.classList.remove('show');
   theQuestionSection.removeAttribute('hidden');
   theQuestionSection.classList.add('show');
+  theQuestionSection.focus();
 });
