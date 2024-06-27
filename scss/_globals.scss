@@ -1,0 +1,79 @@
+@use 'variables';
+@import 'https://fonts.googleapis.com/css?family=Noto%20Kufi%20Arabic:700|Noto%20Kufi%20Arabic:400';
+
+// https://webaim.org/techniques/css/invisiblecontent/
+.sr-only {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: variables.$background;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-weight: 400;
+  margin-inline: auto;
+  max-width: 700px;
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: variables.$text;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
+
+p {
+  color: variables.$text;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  margin-bottom: 1rem;
+  max-width: calc(100% - 1rem);
+}

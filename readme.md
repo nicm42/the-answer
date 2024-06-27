@@ -12,11 +12,11 @@ An animation of the answer (and the question) from The Hitchhiker's Guide to the
 
 ## General info
 
-TBC
+I wanted to do something where everything on the page changes when you click a button. That's easy to do in React etc, but I wanted to see how to get it to work in vanilla JavaScript.
 
 ## Screenshots
 
-TBC
+![Screenshot](screenshot.png)
 
 ## Technologies
 
@@ -26,8 +26,18 @@ TBC
 
 ## Setup
 
-TBC
+To view this project visit the demo TBC or download the files, open a terminal in that folder and install locally using npm:
+
+```
+npm install
+```
+
+Then run the app locally:
+
+```
+npm run dev
+```
 
 ## Status
 
-Project is: _in progress_
+Project is: _finished_

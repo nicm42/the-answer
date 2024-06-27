@@ -1,0 +1,12 @@
+@use 'mixins';
+
+body {
+  position: relative;
+}
+
+section {
+  @include mixins.hide-show;
+
+  outline: none;
+  position: absolute;
+}

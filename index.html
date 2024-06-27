@@ -2,12 +2,255 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>The Answer</title>
   </head>
   <body>
-    <div id="app"></div>
+    <section class="intro show">
+      <p>
+        Here is Deep Thought. He is a computer created to work out the answer to
+        the great question of life, the universe and everything. He has finished
+        thinking and is ready to give you the answer he has come up with.
+      </p>
+      <img
+        src="/assets/deep-thought.jpg"
+        alt="Deep Thought"
+        width="468"
+        height="286"
+      />
+      <button class="show-the-answer">Tell me the answer</button>
+    </section>
+    <section class="the-answer" hidden>
+      <div class="deep-thought">
+        <p class="sr-only">Deep Thought says 42</p>
+        <div class="speech-bubble" aria-hidden="true">42</div>
+        <img
+          src="/assets/deep-thought.jpg"
+          alt="Deep Thought"
+          width="468"
+          height="286"
+          aria-hidden="true"
+        />
+      </div>
+      <p>
+        42 doesn't make sense. But that's because you don't know the actual
+        question. Would you like to know what it is?
+      </p>
+      <button class="show-earth">Tell me the question</button>
+    </section>
+    <section class="earth" hidden>
+      <div class="earth-container" aria-live="polite">
+        <div class="earth-img show">
+          <p class="sr-only">Here's the Earth</p>
+          <img
+            src="/assets/earth.png"
+            alt="Earth"
+            width="692"
+            height="692"
+            aria-hidden="true"
+          />
+        </div>
+        <div class="explosion-img">
+          <p class="sr-only">Oh no! The Earth has exploded</p>
+          <img
+            src="/assets/explosion.png"
+            alt="Explosion"
+            width="692"
+            height="519"
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="earth-exploded" hidden tabindex="0">
+      <p>
+        Oh dear. The computer Deep Thought created to work out the question has
+        been mistaken for an ordinary planet and destroyed to make way for an
+        intergalactic bypass. Now we'll never know the answer.
+      </p>
+      <button class="show-the-question">Tell me the question</button>
+    </section>
+    <section class="the-question" hidden>
+      <p class="sr-only">What do you get if you multiply six by nine</p>
+      <div class="scrabble-container" aria-hidden="true">
+        <div class="word">
+          <div class="tile">
+            <p class="letter">W</p>
+            <p class="value">4</p>
+          </div>
+          <div class="tile">
+            <p class="letter">H</p>
+            <p class="value">4</p>
+          </div>
+          <div class="tile">
+            <p class="letter">A</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">T</p>
+            <p class="value">1</p>
+          </div>
+        </div>
+        <!-- end word -->
+
+        <div class="word">
+          <div class="tile">
+            <p class="letter">D</p>
+            <p class="value">2</p>
+          </div>
+          <div class="tile">
+            <p class="letter">O</p>
+            <p class="value">4</p>
+          </div>
+        </div>
+        <!-- end word -->
+
+        <div class="word">
+          <div class="tile">
+            <p class="letter">Y</p>
+            <p class="value">4</p>
+          </div>
+          <div class="tile">
+            <p class="letter">O</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">U</p>
+            <p class="value">1</p>
+          </div>
+        </div>
+        <!-- end word -->
+
+        <div class="word">
+          <div class="tile">
+            <p class="letter">G</p>
+            <p class="value">2</p>
+          </div>
+          <div class="tile">
+            <p class="letter">E</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">T</p>
+            <p class="value">1</p>
+          </div>
+        </div>
+        <!-- end word -->
+
+        <div class="word">
+          <div class="tile">
+            <p class="letter">I</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">F</p>
+            <p class="value">4</p>
+          </div>
+        </div>
+        <!-- end word -->
+
+        <div class="word">
+          <div class="tile">
+            <p class="letter">Y</p>
+            <p class="value">4</p>
+          </div>
+          <div class="tile">
+            <p class="letter">O</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">U</p>
+            <p class="value">1</p>
+          </div>
+        </div>
+        <!-- end word -->
+
+        <div class="word">
+          <div class="tile">
+            <p class="letter">M</p>
+            <p class="value">3</p>
+          </div>
+          <div class="tile">
+            <p class="letter">U</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">L</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">T</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">I</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">P</p>
+            <p class="value">3</p>
+          </div>
+          <div class="tile">
+            <p class="letter">L</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">Y</p>
+            <p class="value">4</p>
+          </div>
+        </div>
+        <!-- end word -->
+
+        <div class="word">
+          <div class="tile">
+            <p class="letter">S</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">I</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">X</p>
+            <p class="value">8</p>
+          </div>
+        </div>
+        <!-- end word -->
+
+        <div class="word">
+          <div class="tile">
+            <p class="letter">B</p>
+            <p class="value">3</p>
+          </div>
+          <div class="tile">
+            <p class="letter">Y</p>
+            <p class="value">4</p>
+          </div>
+        </div>
+        <!-- end word -->
+
+        <div class="word">
+          <div class="tile">
+            <p class="letter">N</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">I</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">N</p>
+            <p class="value">1</p>
+          </div>
+          <div class="tile">
+            <p class="letter">E</p>
+            <p class="value">1</p>
+          </div>
+        </div>
+        <!-- end word -->
+      </div>
+    </section>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

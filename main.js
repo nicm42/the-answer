@@ -1,24 +1,57 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import '/scss/styles.scss';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+// Show and hide sections as buttons are pressed
+const introSection = document.querySelector('.intro');
+const theAnswerSection = document.querySelector('.the-answer');
+const earthSection = document.querySelector('.earth');
+const earthExplodedSection = document.querySelector('.earth-exploded');
+const theQuestionSection = document.querySelector('.the-question');
 
-setupCounter(document.querySelector('#counter'))
+const showTheAnswerButton = document.querySelector('.show-the-answer');
+const showEarthButton = document.querySelector('.show-earth');
+const showTheQuestionButton = document.querySelector('.show-the-question');
+
+const earthImage = document.querySelector('.earth-img');
+const explosionImage = document.querySelector('.explosion-img');
+
+showTheAnswerButton.addEventListener('click', () => {
+  introSection.setAttribute('hidden', 'true');
+  introSection.classList.remove('show');
+  theAnswerSection.removeAttribute('hidden');
+  theAnswerSection.classList.add('show');
+  theAnswerSection.focus();
+});
+
+showEarthButton.addEventListener('click', () => {
+  theAnswerSection.setAttribute('hidden', 'true');
+  theAnswerSection.classList.remove('show');
+  earthSection.removeAttribute('hidden');
+  earthSection.classList.add('show');
+  earthSection.focus();
+
+  // After the Earth is visible, show the explosion
+  setTimeout(() => {
+    earthImage.setAttribute('hidden', 'true');
+    earthImage.classList.remove('show');
+    explosionImage.removeAttribute('hidden');
+    explosionImage.classList.add('show');
+    explosionImage.focus();
+
+    // After the Earth has exploded, show the next section
+    setTimeout(() => {
+      earthSection.setAttribute('hidden', 'true');
+      earthSection.classList.remove('show');
+      earthExplodedSection.removeAttribute('hidden');
+      earthExplodedSection.classList.add('show');
+      earthExplodedSection.focus();
+    }, 1500);
+  }, 1500);
+});
+
+showTheQuestionButton.addEventListener('click', () => {
+  earthExplodedSection.setAttribute('hidden', 'true');
+  earthExplodedSection.classList.remove('show');
+  theQuestionSection.removeAttribute('hidden');
+  theQuestionSection.classList.add('show');
+  theQuestionSection.focus();
+});
