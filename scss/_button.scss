@@ -2,14 +2,14 @@
 
 button {
   background-color: variables.$primary;
-  color: variables.$text;
   border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: background-color 250ms ease-out;
-  margin-bottom: 2rem;
   border-radius: 0.25em;
+  color: variables.$text;
+  cursor: pointer;
   font-size: inherit;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 250ms ease-out;
 
   &:hover,
   &:focus,

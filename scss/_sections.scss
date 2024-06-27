@@ -6,6 +6,7 @@ body {
 
 section {
   @include mixins.hide-show;
-  position: absolute;
+
   outline: none;
+  position: absolute;
 }

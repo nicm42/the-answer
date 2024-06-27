@@ -1,7 +1,7 @@
 .deep-thought {
   display: inline-block;
-  position: relative;
   padding-top: 0.5em;
+  position: relative;
 
   // https://css-generators.com/tooltip-speech-bubble/
   .speech-bubble {
@@ -13,7 +13,12 @@
     --border-colour: black;
     --background-colour: white;
 
-    padding: 1em;
+    background: var(--border-colour);
+    border-image: conic-gradient(var(--border-colour) 0 0) fill 0 /
+      var(--radius)
+      max(0%, 100% - var(--position) - var(--height) * tan(var(--angle) / 2)) 0
+      max(0%, var(--position) - var(--height) * tan(var(--angle) / 2)) / 0 0
+      var(--height) 0;
     border-radius: var(--radius) var(--radius)
       min(
         var(--radius),
@@ -32,22 +37,24 @@
       var(--position) calc(100% + var(--height)),
       max(0%, var(--position) - var(--height) * tan(var(--angle) / 2)) 100%
     );
-    background: var(--border-colour);
-    border-image: conic-gradient(var(--border-colour) 0 0) fill 0 /
-      var(--radius)
-      max(0%, 100% - var(--position) - var(--height) * tan(var(--angle) / 2)) 0
-      max(0%, var(--position) - var(--height) * tan(var(--angle) / 2)) / 0 0
-      var(--height) 0;
+    padding: 1em;
     position: absolute;
     right: -0.25em;
     top: -0.25em;
 
     &::before {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      inset: 0;
-      padding: var(--border-width);
+      background: var(--background-colour) content-box;
+      border-image: conic-gradient(var(--background-colour) 0 0) fill 0 /
+        var(--radius)
+        max(
+          var(--border-width),
+          100% - var(--position) - var(--height) * tan(var(--angle) / 2)
+        )
+        0
+        max(
+          var(--border-width),
+          var(--position) - var(--height) * tan(var(--angle) / 2)
+        ) / 0 0 var(--height) 0;
       border-radius: inherit;
       clip-path: polygon(
         0 100%,
@@ -72,18 +79,11 @@
           )
           calc(100% - var(--border-width))
       );
-      background: var(--background-colour) content-box;
-      border-image: conic-gradient(var(--background-colour) 0 0) fill 0 /
-        var(--radius)
-        max(
-          var(--border-width),
-          100% - var(--position) - var(--height) * tan(var(--angle) / 2)
-        )
-        0
-        max(
-          var(--border-width),
-          var(--position) - var(--height) * tan(var(--angle) / 2)
-        ) / 0 0 var(--height) 0;
+      content: '';
+      inset: 0;
+      padding: var(--border-width);
+      position: absolute;
+      z-index: -1;
     }
   }
 }

@@ -1,13 +1,13 @@
 @mixin hide-show {
   opacity: 0;
-  visibility: hidden;
   transition:
     opacity 500ms ease-out,
     visibility 0ms ease-out 500ms;
+  visibility: hidden;
 
   &.show {
     opacity: 1;
-    visibility: visible;
     transition-delay: 0ms;
+    visibility: visible;
   }
 }
